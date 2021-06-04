@@ -184,6 +184,8 @@ catch(ex)
 {
     console.error(ex);
 }
+
+
 /* UC4:- Ability to find existing contact person using their name and edit it */
 function SearchName(addressbook)
 {
@@ -191,3 +193,16 @@ function SearchName(addressbook)
 }
 let searchResult =addressArr.find(SearchName);
 console.log("Result after searching:-  "+searchResult);
+
+
+
+/* UC5:- Ability to find a person with name delete it from the array */
+
+function DeleteAddress(addressbook)
+{
+    let resultAddress = SearchName(addressbook);
+    var index= addressArr.indexOf(resultAddress);
+    return index;
+}
+let deleteIndex=addressArr.find(DeleteAddress);
+console.log(addressArr.splice(deleteIndex,1)+" is deleted")
